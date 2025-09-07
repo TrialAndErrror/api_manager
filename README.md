@@ -263,14 +263,21 @@ python -m flake8 .  # If you have flake8 installed
 
 ### Basic Usage
 
+With UV:
+```bash
+uv run main.py
+```
+
+Without UV:
 ```bash
 python main.py
 ```
 
 This will:
-1. Geocode the input address to get coordinates
-2. Fetch 7-day weather forecast from Open-Meteo API
-3. Display a temperature graph
+1. Prompt the user for an address 
+2. Geocode the address to get coordinates
+3. Fetch 7-day weather forecast from Open-Meteo API
+4. Display a temperature graph
 
 ### Programmatic Usage
 
