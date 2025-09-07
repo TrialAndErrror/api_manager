@@ -428,46 +428,6 @@ if not location:
 - Keep functions focused and single-purpose
 - Use clear, descriptive names
 
-### 5. Configuration Management
-
-Consider using Pydantic Settings for configuration:
-
-```python
-from pydantic_settings import BaseSettings
-
-class Settings(BaseSettings):
-    api_base_url: str = "https://api.open-meteo.com/v1/forecast"
-    user_agent: str = "api_manager_location"
-    temperature_unit: str = "fahrenheit"
-    
-    class Config:
-        env_file = ".env"
-```
-
-## Extending the Application
-
-### Adding More Weather Data
-
-1. Update the Pydantic models in `types.py`:
-```python
-class HourlyData(BaseModel):
-    temperature_2m: list[float]
-    humidity: list[int]  # Add humidity
-    precipitation: list[float]  # Add precipitation
-    time: list[datetime]
-```
-
-2. Update the API parameters in `run.py`:
-```python
-params = {
-    "latitude": lat,
-    "longitude": long,
-    "hourly": "temperature_2m,humidity,precipitation",  # Add new fields
-    "models": "gfs_seamless",
-    "temperature_unit": "fahrenheit"
-}
-```
-
 ## Conclusion
 
 This project demonstrates how to build a robust Python application using modern tools and practices:
