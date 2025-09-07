@@ -1,6 +1,7 @@
-# API Manager - Weather Forecast Application
+# API Manager - Type-Safe API Integrations
 
-A Python application that demonstrates modern Python development practices using **Pydantic** for data validation, **MyPy** for static type checking, and clean architecture patterns. This project fetches weather forecast data from the Open-Meteo API and visualizes it using matplotlib.
+A Python application that demonstrates modern Python development practices using **Pydantic** for data validation, **MyPy** for static type checking, and clean architecture patterns.
+The primary API integration in this project fetches weather forecast data from the Open-Meteo API and visualizes it using matplotlib.
 
 ## Table of Contents
 
