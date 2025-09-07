@@ -3,12 +3,13 @@ name = "api-manager"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "geopy>=2.4.1",
     "matplotlib>=3.10.6",
     "mypy>=1.17.1",
     "pydantic>=2.11.7",
     "requests>=2.32.5",
+    "textual>=0.66.0",
     "types-requests>=2.32.4.20250809",
 ]
